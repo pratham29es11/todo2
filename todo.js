@@ -29,10 +29,9 @@ const todoList = () => {
     // Format the To-Do list here, and return the output string as per the format given above.
     return list.map(
       (item) =>
-        `${item.completed ? "[x]" : "[ ]"} ${item.title} ${
-          item.dueDate === new Date().toLocaleDateString("en-CA")
-            ? `${item.completed}`
-            : `${item.dueDate} ${item.completed}`
+        `${item.completed ? "[x]" : "[ ]"} ${item.title} ${item.dueDate === new Date().toLocaleDateString("en-CA")
+          ? `${item.completed}`
+          : `${item.dueDate} ${item.completed}`
         }`
     );
   };
